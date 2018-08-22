@@ -1,0 +1,18 @@
+server:
+  port: 8000   #注册中心端口是8001
+
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/quxiaoyao/learngit.git
+          search-paths: 
+          username: 987055820@qq.com
+          password: 1want.you
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8089/eureka/
