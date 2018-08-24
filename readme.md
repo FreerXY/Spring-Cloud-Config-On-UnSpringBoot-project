@@ -3,6 +3,6 @@ HelloSpringMVC:整合爬虫后的MVC项目
 spider:爬虫程序，只有依赖jar包和源码
 
 1.将HelloSpringMVC中的config目录下的application2.properties的重命名为application2-dev.properties并上传到你自己git上
-2.配置spring-config-server指向你自己的git
+2.配置spring-config-server指向你自己的git，与爬虫路径指向配置服务器提供的配置URL
 
 详细博客地址：https://blog.csdn.net/xiayao111/article/details/81949144
