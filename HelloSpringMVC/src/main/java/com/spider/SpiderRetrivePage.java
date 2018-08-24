@@ -1,5 +1,6 @@
 package com.spider;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,14 +13,13 @@ import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.methods.PostMethod;
 
-public class RetrivePage {
+public class SpiderRetrivePage {
 	private static HttpClient httpClient = new HttpClient();
 	// 设置代理服务器
 //	static {
 //		// 设置代理服务器的IP地址和端口
 //		httpClient.getHostConfiguration().setProxy("192.168.0.107", 8080);
 //	}
-
 	public static boolean downloadPage(String path,String filename) throws HttpException,
 			IOException {
 		InputStream input = null;
@@ -45,7 +45,10 @@ public class RetrivePage {
 			//得到文件名
 //			String filename = path.substring(path.lastIndexOf('/')+1);
 			//获得文件输出流
-			output = new FileOutputStream(filename);
+			System.out.println("路径="+System.getProperty("user.dir"));
+			File file=new File(filename);
+			output = new FileOutputStream(file);
+			System.out.println("文件路径1"+file.getCanonicalFile());
 			//输出到文件
 			int tempByte = -1;
 			while((tempByte=input.read())>0){
