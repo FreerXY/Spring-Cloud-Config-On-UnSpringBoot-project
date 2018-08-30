@@ -10,8 +10,8 @@ spring:
         git:
           uri: https://gitee.com/quxiaoyao/learngit.git
           search-paths: 
-          username: 987055820@qq.com
-          password: 1want.you
+          username: 
+          password: 
 eureka:
   client:
     service-url:
